@@ -1,12 +1,12 @@
 [package]
 
 name = "murmurhash3"
-version = "0.0.6"
-authors = ["mhallin <mhallin@gmail.com>"]
+version = "1.0.0"
+authors = ["mhallin <mhallin@gmail.com>", "mhseiden <140dbs@gmail.com>"]
 description = "MurmurHash3 implementation"
 license = "MIT"
 readme = "README.rst"
-homepage = "https://github.com/mhallin/murmurhash3-rs"
+homepage = "https://github.com/mhseiden/murmurhash3-rs"
 
 [lib]
 name = "murmurhash3"
@@ -14,6 +14,3 @@ path = "src/lib.rs"
 
 [dev-dependencies]
 rand = "*"
-
-[features]
-nightly = []
