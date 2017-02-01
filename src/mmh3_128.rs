@@ -10,6 +10,7 @@ pub struct Murmur3State {
     words: (u64, u64),
     consumed: usize,
     xblock: Vec<u8>,
+    seed: u64,
 }
 
 impl Murmur3State {
@@ -18,7 +19,13 @@ impl Murmur3State {
             words: (seed, seed),
             consumed: 0,
             xblock: Vec::with_capacity(READ_SIZE),
+            seed: seed,
         }
+    }
+    pub fn clear(&mut self) {
+        self.words = (self.seed, self.seed);
+        self.consumed = 0;
+        self.xblock.clear();
     }
 }
 
